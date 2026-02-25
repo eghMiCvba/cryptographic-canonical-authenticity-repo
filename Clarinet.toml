@@ -1,0 +1,23 @@
+[project]
+name = "cryptographic-canonical-authenticity-repo"
+authors = []
+description = ""
+telemetry = true
+requirements = []
+cache_dir = "/home/runner/workspace/cryptographic-canonical-authenticity-repo/./.requirements"
+boot_contracts = ["pox", "costs-v2", "bns"]
+[contracts.cryptographic-canonical-authenticity-repo]
+path = "contracts/cryptographic-canonical-authenticity-repo.clar"
+
+[repl]
+costs_version = 2
+parser_version = 2
+
+[repl.analysis]
+passes = ["check_checker"]
+
+[repl.analysis.check_checker]
+strict = false
+trusted_sender = false
+trusted_caller = false
+callee_filter = false
